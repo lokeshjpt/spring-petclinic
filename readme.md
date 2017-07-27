@@ -1,7 +1,7 @@
-# Spring PetClinic Sample Application
+# Spring PetClinic Sample Application.
 
 
-## Understanding the Spring Petclinic application with a diagrams
+## Understanding the Spring Petclinic application with a diagrams.
 <a href="https://speakerdeck.com/michaelisvy/spring-petclinic-sample-application">See the presentation here</a>
 
 ## Running petclinic locally
