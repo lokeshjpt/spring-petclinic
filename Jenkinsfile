@@ -8,7 +8,7 @@ pipeline {
     }
     stage('build') {
       steps {
-        sh 'mvn --version'
+        sh '/Users/Shared/apache-maven-3.5.2/bin/mvn --version'
       }
     }
   }
