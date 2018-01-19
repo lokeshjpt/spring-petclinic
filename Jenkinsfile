@@ -3,6 +3,7 @@ pipeline {
   stages {
     stage('checkout') {
       steps {
+        sh 'rm -rf /Users/Shared/Jenkins/Home/workspace/spring-petclinic*'
         git(url: 'https://github.com/lokeshjpt/spring-petclinic.git', branch: 'master', changelog: true, poll: true)
       }
     }
