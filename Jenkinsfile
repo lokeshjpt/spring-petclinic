@@ -1,11 +1,6 @@
 pipeline {
   agent any
   stages {
-    stage('clean workspace') {
-      steps {
-        sh 'rm -rf /Users/Shared/Jenkins/Home/workspace/spring-petclinic*'
-      }
-    }
     stage('clone from git') {
       steps {
         git(url: 'https://github.com/lokeshjpt/spring-petclinic.git', branch: 'master', changelog: true, poll: true)
