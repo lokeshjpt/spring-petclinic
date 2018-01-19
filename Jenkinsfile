@@ -1,15 +1,19 @@
 pipeline {
   agent any
   stages {
-    stage('checkout') {
+    stage('clean workspace') {
       steps {
         sh 'rm -rf /Users/Shared/Jenkins/Home/workspace/spring-petclinic*'
+      }
+    }
+    stage('clone from git') {
+      steps {
         git(url: 'https://github.com/lokeshjpt/spring-petclinic.git', branch: 'master', changelog: true, poll: true)
       }
     }
     stage('build') {
       steps {
-        sh '/Users/Shared/apache-maven-3.5.2/bin/mvn -e -X clean install'
+        sh '/Users/Shared/apache-maven-3.5.2/bin/mvn clean install'
       }
     }
   }
