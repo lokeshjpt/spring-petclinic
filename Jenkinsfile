@@ -8,7 +8,7 @@ pipeline {
     }
     stage('build') {
       steps {
-        sh '/Users/Shared/apache-maven-3.5.2/bin/mvn --version'
+        sh '/Users/Shared/apache-maven-3.5.2/bin/mvn -e -X clean install'
       }
     }
   }
